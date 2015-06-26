@@ -1,10 +1,7 @@
+var args = process.argv.slice(2);
 
-var arguments = process.argv.slice(2)
+var sum = args.reduce(function(acc, elem) {
+  return acc + parseInt(elem);
+}, 0);
 
-sum = 0
-
-for (var i = 0; i < arguments.length; i++) {
-  sum += Number(arguments[i])
-}
-
-console.log(sum)
+console.log(sum);
